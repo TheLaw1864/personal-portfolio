@@ -312,9 +312,10 @@
 
   function contactHTML() {
     const c = C.contact;
-    const copyVal = (l) => l.label === "Email" ? c.email : l.label === "Phone" ? c.phone : l.url;
-    const links = C.meta.links.filter(l => l.url).map(l =>
-      `<button class="btn btn--ghost" data-cursor="link" data-magnetic data-ripple data-copy="${esc(copyVal(l))}" data-copy-label="${esc(l.label)}">${esc(l.label)}</button>`).join("");
+    const copyVal = (l) => l.label === "Email" ? c.email : l.url;
+    const links = C.meta.links.filter(l => l.url).map(l => l.open
+      ? `<a class="btn btn--ghost" href="${esc(l.url)}" target="_blank" rel="noopener" data-cursor="link" data-magnetic data-ripple>${esc(l.label)}</a>`
+      : `<button class="btn btn--ghost" data-cursor="link" data-magnetic data-ripple data-copy="${esc(copyVal(l))}" data-copy-label="${esc(l.label)}">${esc(l.label)}</button>`).join("");
     return `
     <section class="section-pad contact" id="contact">
       <div class="wrap">
@@ -322,8 +323,9 @@
           <div class="eyebrow" style="justify-content:center">${esc(c.heading)}</div>
           <h2 class="contact__title">Let's<br>work together</h2>
           <button class="contact__email" data-cursor="link" data-copy="${esc(c.email)}" data-copy-label="Email">${esc(c.email)}</button>
+          ${c.whatsapp ? `<p class="contact__hint">WhatsApp ${esc(c.whatsapp)}</p>` : ""}
           <div class="contact__actions">${links}</div>
-          <p class="contact__hint">Click any of these to copy ✨</p>
+          <p class="contact__hint">Click the email to copy it, or message me on WhatsApp ✨</p>
         </div>
       </div>
     </section>`;

@@ -21,13 +21,13 @@ const SITE_CONTENT = {
     role: "Marketing & Commercial Growth",
     tagline: "I turn brand, digital and demand generation into pipeline - then help close it.",
     location: "KwaZulu-Natal, South Africa",
-    email: "dakotah@resrequest.com",
-    phone: "+27 79 282 5894",
+    email: "dakotah@workflowgroup.com",
+    whatsapp: "+27 79 282 5894",
     siteTitle: "Dakotah Howes - Portfolio",
     links: [
       { label: "LinkedIn", url: "https://www.linkedin.com/in/dakotah-howes" },
-      { label: "Email",    url: "mailto:dakotah@resrequest.com" },
-      { label: "Phone",    url: "tel:+27792825894" }
+      { label: "Email",    url: "mailto:dakotah@workflowgroup.com" },
+      { label: "WhatsApp", url: "https://wa.me/27792825894", open: true }   // opens a WhatsApp chat
     ]
   },
 
@@ -315,8 +315,8 @@ const SITE_CONTENT = {
   /* ---- CONTACT ------------------------------------------------------------ */
   contact: {
     heading: "Let's talk",
-    email: "dakotah@resrequest.com",
-    phone: "+27 79 282 5894"
+    email: "dakotah@workflowgroup.com",
+    whatsapp: "+27 79 282 5894"
   }
 };
 

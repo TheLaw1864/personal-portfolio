@@ -37,7 +37,7 @@ assets/img/decks/     → rendered slides from your AGM/year-end presentations
 
 ## Features
 - **Light / dark mode** — toggle in the top-right; the choice is remembered between visits.
-- **Copy to clipboard** — the contact buttons copy the email / phone / LinkedIn on click
+- **Copy to clipboard** — the contact buttons copy the email / LinkedIn on click; WhatsApp opens a chat
   (works on a real https server or localhost).
 - **Archive lightbox** — click any presentation to page through every slide.
 - **Slideshows** — the Beyond page galleries auto-advance, with arrows + dots.
